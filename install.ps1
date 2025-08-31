@@ -1,6 +1,12 @@
+#Requires -RunAsAdministrator
 param(
     [switch]$Quiet
 )
+
+if (-not ([Security.Principal.WindowsPrincipal]::new([Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))) {
+    Write-Error "This script must be run as Administrator."
+    exit 1
+}
 
 # Determine system architecture
 $arch = (Get-CimInstance Win32_OperatingSystem).OSArchitecture
