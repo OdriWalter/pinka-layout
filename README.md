@@ -32,7 +32,14 @@ Named after the [Pinka river](https://en.wikipedia.org/wiki/Pinka)—the only ri
 3. Open **System Settings → Keyboard → Input Sources** and click **+** to add **Pinka**.
 4. Switch layouts with the menu bar keyboard switcher or `Ctrl+Space`.
 
-**Uninstall**: run `uninstall.ps1` (add `-Quiet` for silent) or Apps → Installed apps → Pinka → Uninstall.
+**Install (Linux)**
+1. Run `sudo ./install.sh` to copy the layout to `/usr/share/X11/xkb/` and register it.
+2. Add **Pinka** in your desktop environment's keyboard settings.
+3. Switch layouts with your usual shortcut.
+
+**Uninstall**
+- Windows: run `uninstall.ps1` (add `-Quiet` for silent) or Apps → Installed apps → Pinka → Uninstall.
+- Linux: run `sudo ./uninstall.sh`.
 
 **Verify download**
 SHA256 checksums are provided in `dist/SHA256SUMS` and on the releases page. Use PowerShell to verify the installer you downloaded:

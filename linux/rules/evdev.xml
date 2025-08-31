@@ -1,0 +1,12 @@
+<layout>
+  <configItem>
+    <name>pinka</name>
+    <shortDescription>Pinka</shortDescription>
+    <description>Pinka</description>
+    <languageList>
+      <iso639Id>hun</iso639Id>
+      <iso639Id>ger</iso639Id>
+      <iso639Id>eng</iso639Id>
+    </languageList>
+  </configItem>
+</layout>
