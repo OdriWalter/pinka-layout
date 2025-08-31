@@ -26,4 +26,8 @@ if ($Quiet) {
     $arguments += " /qn"
 }
 
-Start-Process -FilePath "msiexec.exe" -ArgumentList $arguments -Wait
+$process = Start-Process -FilePath "msiexec.exe" -ArgumentList $arguments -Wait -PassThru
+if ($process.ExitCode -ne 0) {
+    Write-Error "Installer exited with code $($process.ExitCode)"
+}
+exit $process.ExitCode
