@@ -1,5 +1,7 @@
 # Pinka — QWERTY + AltGr for Hungarian
 
+![Pinka logo](pinka_transparent.png)
+
 **Goal:** full Hungarian on US QWERTY without relearning keys.
 
 **Features**
