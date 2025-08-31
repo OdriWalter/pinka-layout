@@ -1,8 +1,10 @@
-# Pinka — QWERTY + AltGr for Hungarian
+# Pinka — QWERTY + AltGr for Hungarian and German
 
 ![Pinka logo](pinka_transparent.png)
 
-**Goal:** full Hungarian on US QWERTY without relearning keys.
+Named after the [Pinka river](https://en.wikipedia.org/wiki/Pinka)—the only river that flows through both Austria and Hungary and whose name is spelled identically in Hungarian, German, and English. This reflects Pinka’s aim for a universal layout spanning English, Hungarian, and German, represented by the Austro-Hungarian flag in our logo.
+
+**Goal:** full Hungarian and German support on US QWERTY without relearning keys.
 
 **Features**
 - AltGr layer: á é í ó ö ő ú ü ű and gy ly ny. Shift → capitals.
