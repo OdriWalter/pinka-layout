@@ -2,20 +2,9 @@ param(
     [switch]$Quiet
 )
 
-# Determine system architecture
-$arch = (Get-CimInstance Win32_OperatingSystem).OSArchitecture
+. "$PSScriptRoot/scripts/common.ps1"
 
-switch -regex ($arch) {
-    '64' { $msi = 'Pinka_amd64.msi' }
-    '32' { $msi = 'Pinka_i386.msi' }
-    'Itanium|IA64' { $msi = 'Pinka_ia64.msi' }
-    default {
-        Write-Error "Unsupported architecture: $arch"
-        exit 1
-    }
-}
-
-$msiPath = Join-Path $PSScriptRoot $msi
+$msiPath = Get-PinkaMsi
 if (-not (Test-Path $msiPath)) {
     Write-Error "Installer $msiPath not found."
     exit 1
