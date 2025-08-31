@@ -15,6 +15,7 @@
    - `Pinka_ia64.msi` for Itanium systems
    - `setup.exe` for a guided installer
 2. Run `install.ps1` to auto-detect and install (use `-Quiet` for silent mode) or launch the installer you downloaded.
+   The script verifies the installer's SHA256 checksum against `dist/SHA256SUMS` before proceeding.
 3. Settings → Time & Language → Language → Keyboard → add **Pinka**.
 4. Switch with Win+Space.
    Note: on Windows, **AltGr = Right Alt = Ctrl+Alt**. If an app uses Ctrl+Alt shortcuts, rebind them.
