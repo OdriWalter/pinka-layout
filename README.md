@@ -24,6 +24,14 @@ Named after the [Pinka river](https://en.wikipedia.org/wiki/Pinka)—the only ri
 4. Switch with Win+Space.
    Note: on Windows, **AltGr = Right Alt = Ctrl+Alt**. If an app uses Ctrl+Alt shortcuts, rebind them.
 
+**Install (macOS)**
+1. Copy `macos/Pinka.bundle` to `/Library/Keyboard Layouts/` (for all users) or `~/Library/Keyboard Layouts/` (just for the current user).
+   - Optional: convert `pinka_transparent.png` to `Pinka.icns` with Preview or `iconutil`
+     and place it in `macos/Pinka.bundle/Contents/Resources` before copying if you want a custom icon.
+2. Log out and back in so macOS loads the new layout.
+3. Open **System Settings → Keyboard → Input Sources** and click **+** to add **Pinka**.
+4. Switch layouts with the menu bar keyboard switcher or `Ctrl+Space`.
+
 **Uninstall**: run `uninstall.ps1` (add `-Quiet` for silent) or Apps → Installed apps → Pinka → Uninstall.
 
 **Verify download**
