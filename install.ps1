@@ -27,6 +27,24 @@ if (-not (Test-Path $msiPath)) {
     exit 1
 }
 
+# Verify SHA256 checksum if available
+$checksumFile = Join-Path $PSScriptRoot 'dist' 'SHA256SUMS'
+if (Test-Path $checksumFile) {
+    $expected = Get-Content $checksumFile | Where-Object { $_ -match "\s$msi$" }
+    if ($expected) {
+        $expectedHash = $expected.Split(' ')[0].ToLower()
+        $actualHash = (Get-FileHash $msiPath -Algorithm SHA256).Hash.ToLower()
+        if ($actualHash -ne $expectedHash) {
+            Write-Error "SHA256 mismatch for $msiPath. Expected $expectedHash but got $actualHash."
+            exit 1
+        }
+    } else {
+        Write-Warning "No checksum entry for $msi in $checksumFile."
+    }
+} else {
+    Write-Warning "Checksum file $checksumFile not found."
+}
+
 $arguments = "/i `"$msiPath`""
 if ($Quiet) {
     $arguments += " /qn"
