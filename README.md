@@ -46,4 +46,30 @@ Get-FileHash .\setup.exe -Algorithm SHA256
 | setup.exe       | 26e455d1953fe77a034f3bd53fc2bbe8caf22de2f6c9e53b03cd7cb0685feeef |
 | pinka.zip       | 2cacb3851625ecb326365cca63c34859228d121d1a04895e1451d0949272be4f |
 
+## Build
+
+The installers are generated with [Microsoft Keyboard Layout Creator (MSKLC)
+1.4](https://www.microsoft.com/en-us/download/details.aspx?id=102134).
+
+1. Open the `Pinka.klc` source file in MSKLC.
+2. Choose **Project → Build DLL and Setup Package**.
+3. MSKLC produces the architecture-specific `.msi` files, `setup.exe`, and a
+   `pinka.zip` archive in the project directory.
+
+### Regenerate checksums
+
+After building, refresh `dist/SHA256SUMS`:
+
+```powershell
+Get-FileHash Pinka_amd64.msi,Pinka_i386.msi,Pinka_ia64.msi,setup.exe,pinka.zip `
+  -Algorithm SHA256 | ForEach-Object { "$(($_.Hash))  $(Split-Path $_.Path -Leaf)" } |
+  Set-Content dist/SHA256SUMS
+```
+
+Or on Unix-like systems:
+
+```bash
+sha256sum Pinka_amd64.msi Pinka_i386.msi Pinka_ia64.msi setup.exe pinka.zip > dist/SHA256SUMS
+```
+
 **License**: MIT.
