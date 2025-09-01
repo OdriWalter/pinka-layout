@@ -5,7 +5,7 @@
   <key>CFBundleDevelopmentRegion</key>
   <string>en</string>
   <key>CFBundleIdentifier</key>
-  <string>com.example.Pinka</string>
+  <string>io.github.odriwalter.Pinka</string>
   <key>CFBundleName</key>
   <string>Pinka</string>
   <key>CFBundleDisplayName</key>
@@ -15,7 +15,7 @@
   <key>CFBundleVersion</key>
   <string>1.0</string>
   <key>CFBundleSignature</key>
-  <string>????</string>
+  <string>PINK</string>
   <key>CFBundleSupportedPlatforms</key>
   <array>
     <string>MacOSX</string>
