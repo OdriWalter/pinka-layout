@@ -58,7 +58,7 @@ Get-FileHash .\setup.exe -Algorithm SHA256
 | Pinka_amd64.msi | 02124b3d8fb281be65fda6a07e0a9bffeb306260bc025c4ad8be77b50db29615 |
 | Pinka_i386.msi  | 0602c20fb7f722d9f9d32ac9931f656eb76dc1f5937caf02a06c38c6dcacdfa2 |
 | Pinka_ia64.msi  | 99ba7ccc826d11aca828255ad426dafe539a35fde66352c4b492fd54b001cd93 |
-| setup.exe       | 26e455d1953fe77a034f3bd53fc2bbe8caf22de2f6c9e53b03cd7cb0685feeef |
+| setup.exe       | 11d9330496bb7fa4d07603008df28760795973136b060d591f583c0c486e52e3 |
 | pinka.zip       | 2cacb3851625ecb326365cca63c34859228d121d1a04895e1451d0949272be4f |
 
 ## Build
