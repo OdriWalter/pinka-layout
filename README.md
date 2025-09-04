@@ -10,7 +10,7 @@ Named after the [Pinka river](https://en.wikipedia.org/wiki/Pinka)—the only ri
 - Optional Ctrl+Shift accents on the number row for compact boards
 
 ## Installation
-1. Download or clone this repository.
+1. Download this repository as a ZIP file from GitHub (click **Code** ▸ **Download ZIP**) and extract it, or clone the repository.
 2. Run `setup.exe` in the repository root—it automatically selects the correct package.
 3. Add **Pinka** under *Time & Language → Language → Keyboard* in Windows settings.
 
